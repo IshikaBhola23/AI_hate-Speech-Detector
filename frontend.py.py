@@ -1,4 +1,5 @@
 import streamlit as st
+import GA as genetic
 
 # Set page title and background color
 st.set_page_config(page_title="Hate Speech Detector", page_icon=":guardsman:", layout="wide", initial_sidebar_state="expanded")
@@ -30,7 +31,7 @@ if choice == "Home":
     # Add a button to initiate detection
     if st.button("Detect"):
         if text_input != '':
-            if text_input == 'I hate People':
+            if 1 == evaluate(text_input):
                 st.write("This is a form of hate speech.")
             else:
                 st.write("This is not a form of hate speech.")
